@@ -1,46 +1,59 @@
-import React, { useState } from 'react';
 import Button from './Button';
 
+// data for selection status form
+const status = [
+    {
+        status: "All Statuses"
+    },
+    {
+        status: "Non-Completed"
+    },
+    {
+        status: "Completed"
+    }
+]
 
-const FilterSection = ({ data, status }) => {
-    const [isSelectedDev, setIsSelectedDev] = useState(data[0].devName);
-    const [isSelectedStatus, setIsSelectedStatus] = useState('All Status');
-    const [isChecked, setIsChecked] = useState(false);
 
+const FilterSection = ({ dataToFilter, setDataToFilter, dataIsFiltred, setDataIsFiltred, isSelectedDev, setIsSelectedDev, isSelectedStatus, setIsSelectedStatus, isChecked, setIsChecked }) => {
+
+    // to select name of Dev
     const handleChangeSelectionDev = (e) => {
         setIsSelectedDev(e.target.value);
     }
 
+    // to select status
     const handleChangeSelectionStatus = (e) => {
         setIsSelectedStatus(e.target.value);
     }
 
+    //to show/ no-show effeiciency section
     const handleChangeChecked = () => {
         setIsChecked(!isChecked);
     }
 
+    // to filter data
     const handleSubmit = (e) => {
-        console.log()
         e.preventDefault();
-        const filteredData = data.filter(dev => dev.devName === isSelectedDev)
-        console.log(filteredData)
+        // const filteredData = data.filter(dev => dev.devName === isSelectedDev)
+        // console.log(filteredData)
     }
 
+    // to reset all filters
     const handleReset = (e) => {
-
         e.preventDefault();
+        setIsSelectedDev('');
+        setIsSelectedStatus('All status');
+        setIsChecked(false);
     }
-
-
 
     return (
-        <div className='filters'>
+        <section className='filters'>
             <form className='filters__form'>
                 <div className='filters__form-container'>
                     <fieldset className='filters__dev-selected' form='filters__form' name='selected-dev'>
                         <label className='filters__title'>Dev</label>
                         <select id="selected-dev" name="selected-dev" className='filters__selection-form' onChange={handleChangeSelectionDev} value={isSelectedDev}>
-                            {data.map((dev, i) => {
+                            {dataToFilter.map((dev, i) => {
                                 return <option value={dev.devName} key={i} className='filters__option'>{dev.devName}</option>
                             })}
                         </select>
@@ -63,7 +76,7 @@ const FilterSection = ({ data, status }) => {
                     <Button title='Reset Filters' className='filters__button-reset' handleSubmit={handleReset} />
                 </div>
             </form>
-        </div>
+        </section>
     );
 };
 

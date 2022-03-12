@@ -1,83 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import data from '../data/data.json'
 import Header from '../components/Header';
 import FilterSection from './FilterSection';
+import ResultsSection from './ResultsSection';
 import Footer from './Footer';
-import ProjectInfo from './ProjectInfo';
-
-const status = [
-  {
-    status: "All Statuses"
-  },
-  {
-    status: "Non-Completed"
-  },
-  {
-    status: "Completed"
-  }
-]
-
-const info = [
-  {
-    devName: 'Jenny Wilson',
-    statuses: [
-      {
-        nonCompleted: [
-          {
-            projectName: "Science & Information Platform",
-            addInfo: [
-              {
-                lead: "Ralph Edwards",
-                created: "25/06/2019",
-                finished: "30/06/2020",
-                categories: "CMS Production",
-                time: "https://lh3.googleusercontent.com/1MRdZbhLKoKvRbKX2A3ETOp2lksT8F48b4nr9G2fg9F-g9EEa3Gic42f6bUHbWihpkfU9g=s20",
-                label: "Hourly",
-                tag: "https://www.figma.com/file/G4Fdb5bQvW2tNskfvWrTf1/Front-end-Test-Task?node-id=0%3A29",
-                team: "Jane Cooper, Wade Warren, Esther Howard, Cameron Williamson, Brooklyn Simmons, Leslie Alexander, Jenny Wilson, Gur Hawkins, Robert Fox, Jacob Jones, Kristin Watson, Cody Fisher, Savannah Nguen, Bessie Cooper, Albert Flores, Ralph Edwards, Dianne Russel, Devon Lane, Marvin McKinney, Jerome Bell, Courtney Henry, Theresa Webb, Kathrin Murphu, Eleonora Pena, Floud Miles, Darrell Steward"
-              }],
-            timeInfo: [
-              {
-                total: [],
-                current: [
-                  {
-                    month: [
-                      { name: "Sep" }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        completed: [
-          {
-            projectName: "Something else",
-          }
-        ]
-      }
-    ]
-  },
-  {
-    devName: 'Jane Cooper'
-  },
-  {
-    devName: ' Wade Warren'
-  },
-  {
-    devName: ' Esther Howard'
-  }
-]
 
 
 
 function App() {
+  const [dataToFilter, setDataToFilter] = useState(data);
+  const [dataIsFiltred, setDataIsFiltred] = useState([])
+  const [isSelectedDev, setIsSelectedDev] = useState(data[0].devName);
+  const [isSelectedStatus, setIsSelectedStatus] = useState('All Status');
+  const [isChecked, setIsChecked] = useState(false);
+
+  // props for filter section
+  const propsChild = {
+    dataToFilter,
+    setDataToFilter,
+    dataIsFiltred,
+    setDataIsFiltred,
+    isSelectedDev,
+    setIsSelectedDev,
+    isSelectedStatus,
+    setIsSelectedStatus,
+    isChecked,
+    setIsChecked
+  }
+
+
+
+
+
+
 
 
   return (
     <div className="App">
       <Header />
-      <FilterSection data={info} status={status} />
-      <ProjectInfo />
+      <FilterSection {...propsChild} />
+      <ResultsSection />
       <Footer />
     </div>
   );
