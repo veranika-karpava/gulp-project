@@ -1,0 +1,33 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.header{
+    &__item-list{
+        padding: 0 1.5rem;
+        height: 4.25rem;
+        @include flex(center, center, row, nowrap);
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            border-bottom: 2px solid $bg-color-button;
+            border-radius: 0px 0px 2px 2px;
+            }
+        &:nth-child(3) h2{
+            color: $bg-color-button;
+            }
+        }
+
+    &__item-list-active {  
+        border-bottom: 2px solid $bg-color-button;
+        border-radius: 0px 0px 2px 2px;
+        background: rgba(143, 127, 255, 0.15);
+    }
+
+    &__icon-item{
+        padding-right: 0.5rem;
+    }
+
+    &__heading-item{
+       @include font-stack-navBar;
+    }
+}

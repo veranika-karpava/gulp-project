@@ -1,0 +1,13 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.625rem;
+    @include font-stack-footer;
+
+    &__company{
+        @include font-stack-name-company;
+    }
+}

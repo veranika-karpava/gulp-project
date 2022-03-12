@@ -1,0 +1,13 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.filters {
+    &__button-apply{
+        @include button-apply;
+    }
+
+    &__button-reset{
+        margin-left: 1.5rem;
+        @include button-reset;
+    }
+}

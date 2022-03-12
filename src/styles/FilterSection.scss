@@ -1,0 +1,82 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.filters {
+    width: 70%;
+    padding: 2.5rem 0rem 2rem 3.75rem;
+    
+    &__form{
+        @include flex(space-between, flex-end, row, nowrap);
+    }
+
+    &__form-container {
+        @include flex(flex-start, flex-end, row, nowrap);
+        width: 65%;
+        margin-right: 1.5rem;
+    }
+
+    &__button-container{
+        width: 35%;
+    }
+
+    &__dev-selected,
+    &__status-selected {
+        @include flex(space-between, flex-start, column, nowrap);
+        margin-right: 1.5rem;
+        width: 12.5rem;
+        border: 0;
+        padding: 0;
+    }
+
+    &__checkbox {
+        @include flex(flex-start, center, row, nowrap);
+        gap: 0.75rem;
+        height: 2.5rem;
+        border: 0;
+        padding: 0;
+        position:relative;
+    }
+
+    &__selection-form{
+        @include form-style;
+    }
+
+    &__checked-form{
+            &[type = "checkbox"]{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                cursor: pointer;
+                height: 1.25rem;
+                width: 1.25rem;
+                background-color: $bg-color-main;
+                border-radius: 3px;
+                border: 1px solid $color-border;
+            }
+    
+            &[type = "checkbox"]:checked::before{
+                content: '\2713';
+                display: block;
+                text-align: center;
+                color: $text-color-heading;
+                position: absolute;
+                left: 0rem;
+                top: 0.5rem;
+                height: 1.25rem;
+                width: 1.25rem;
+                background-color: $bg-color-button;
+                border: 1px solid $bg-color-button;
+                border-radius: 3px;
+            }
+        }
+
+    &__title{
+        @include font-stack-subheading-project-info;
+        margin-bottom: .5rem;
+    }
+
+    &__title-checked {
+        @include font-stack-subheading-project-info;
+    }
+}

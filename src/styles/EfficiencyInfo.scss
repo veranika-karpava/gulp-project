@@ -1,0 +1,81 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.efficiency{
+        margin: 1.5625rem 3.75rem 2.5rem 3.75rem;
+        background-color: $bg-color-article;
+        @include border-article;
+        padding: 2.5rem 4rem;
+        @include flex(space-between, center, column, nowrap);
+        overflow-y: scroll;
+        max-height: 263px;
+        direction: rtl;
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(350.45deg, #BFBAFA 15.3%, #624BFF 87.74%, #8F7FFF 87.74%, #7F76F7 87.74%);
+            border-radius: 7px 0px 0px 7px;
+            box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        }
+
+    &__heading{
+        @include font-stack-heading;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__container-info {
+        width: 100%;
+        @include flex(space-between, center, row, nowrap);
+        direction: ltr;
+    }
+
+    &__total,
+    &__current{
+        width: 48%;
+    }
+
+    &__subheading{
+        @include font-stack-heading-table-col;
+        margin-bottom: 0.75rem;
+    }
+
+    &__table-efficiency{
+        width: 100%;
+        @include flex(space-between, flex-start, column, nowrap);
+    }
+
+    &__row{
+        padding: .5rem 0rem;
+        width: 100%;
+        border-bottom: 1px solid $color-border;
+        @include flex(space-between, center, row, nowrap);
+        &:nth-child(3){
+            border-bottom: none;
+    }
+    }
+
+    &__heading-table{
+        width: 33.33%;
+        @include font-stack-subheadin-project-time;
+        padding: 0;
+        text-align: left;
+    }
+
+    &__hours,
+    &__percentage{
+        padding: 0;
+        width: 33.33%;
+    }
+
+    &__hours{
+        text-align: center;
+    }
+
+    &__percentage{
+        text-align: right;
+    }
+
+}

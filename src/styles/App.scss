@@ -1,0 +1,16 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+* {
+    margin: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    @include font-stack-body;
+    background-color:$bg-color-main;
+}
