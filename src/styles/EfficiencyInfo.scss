@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 .efficiency{
+        width: 92%;
         margin: 1.5625rem 3.75rem 2.5rem 3.75rem;
         background-color: $bg-color-article;
         @include border-article;

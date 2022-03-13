@@ -76,6 +76,10 @@
     @include font-stack (0.875rem, 700, 1.3125rem, $text-color-heading);
 } 
 
+@mixin font-stack-label{
+    @include font-stack (0.75rem, 400, 1.125rem, $text-color-heading);
+} 
+
 @mixin button-apply{
     @include font-stack-button-apply;
     border-radius: 7px;
@@ -128,6 +132,14 @@
     height: 2.5rem;
     cursor: pointer;
 }
+
+@mixin style-tag{
+    @include font-stack (0.75rem, 400, 1.125rem, $text-color-primary);
+    border: 1px solid $color-border-link;
+    text-decoration : none;
+    padding : 3px 0.75rem;
+    border-radius: 0.9375rem;
+} 
 
 
 

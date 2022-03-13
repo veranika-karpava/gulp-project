@@ -1,0 +1,6 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.results{
+    @include flex(space-between, flex-start, column, nowrap);
+}

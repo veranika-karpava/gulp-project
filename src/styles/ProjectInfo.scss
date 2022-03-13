@@ -1,0 +1,146 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.results {
+    &__container-project{
+        width: 92%;
+        margin: 0rem 3.75rem;
+        @include flex(space-between, center, row, nowrap);
+    }
+
+    &__info-project,
+    &__time-project{
+        width: 48%;
+        height: 37.875rem;
+        overflow-y: scroll;
+        max-height: 37.875rem;
+        background-color: $bg-color-article;
+        @include border-article;
+        padding: 2.5rem 4rem;
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(350.45deg, #BFBAFA 15.3%, #624BFF 87.74%, #8F7FFF 87.74%, #7F76F7 87.74%);
+            border-radius: 7px 0px 0px 7px;
+            box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+        }
+    }
+
+        &__heading-info{
+            @include font-stack-heading;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        &__container-info{
+            width: 100%;
+            @include flex(flex-start, flex-start, row, nowrap);
+
+        }
+
+        &__subheading-info{
+            width: 30%;
+            @include font-stack-heading-table-col;
+            margin-bottom: 1rem;
+        }
+
+        &__content-info{
+            width: 65%;
+        }
+
+        &__content-info-label{
+            @include font-stack-label;
+            background:  linear-gradient(270deg, #544CBA 0%, #7B75CB 100%);
+            padding: 3px 0.75rem 3px 1.25rem;
+            width: 70px;
+            height: 24px;
+            clip-path: polygon(0% 50%, 100% -300%, 100% 500%);
+        }
+
+        &__content-info-link{
+            @include style-tag;
+        }
+
+        &__content-info-status-non{
+            color: $text-color-non-completed;
+        }
+
+        &__content-info-status{
+            color: $text-color-completed;
+        }
+
+        &__container-time{
+            width: 100%;
+            @include flex(space-between, flex-start, row, nowrap);
+        }
+
+        &__container-total-time,
+        &__container-current-time {
+            width: 48%;
+            @include flex(space-between, flex-start, column, nowrap);
+        }
+
+        &__subheading-time,
+        &__subheading{
+            width: 100%;
+            @include font-stack-heading-table-col;
+            margin-bottom: 1rem;
+        }
+
+        &__body-time:last-child{
+            border-bottom:none;
+        }
+
+        &__table-time{
+            width: 100%;
+        }
+
+        &__row,
+        &__row-add{
+            @include flex(space-between, flex-end, row, nowrap);
+            padding: 0.5rem;
+        }
+
+        &__row{
+            width: 100%;
+            border-bottom: 1px solid $color-border;
+            @include font-stack-subheadin-project-time;
+            &:last-child{
+                border-bottom: none;
+                border-top: 1px solid $color-border;
+            }
+        }
+
+        &__row-add{
+            width: 92%;
+            margin: 0 1.125rem;
+            border-bottom: 1px solid $color-border;
+            :first-child{
+                @include font-stack-body;
+            }
+        }
+        &__row-add:nth-of-type(11){
+            border-bottom: none;
+        }
+
+        &__current-month,
+        &__estimations {
+            width: 100%;
+        }
+
+        &__table-estimations {
+            width: 100%;
+        }
+
+        &__subheading-estimation{
+            margin-top: 2rem;
+        }
+
+        &__row-time:last-child{
+            border-top: none;
+        }
+
+
+
+}
