@@ -11,11 +11,11 @@ function App() {
   const [dataToFilter, setDataToFilter] = useState(data);
   const [dataIsFiltred, setDataIsFiltred] = useState([])
   const [isSelectedDev, setIsSelectedDev] = useState(data[0].devName);
-  const [isSelectedStatus, setIsSelectedStatus] = useState('All Status');
+  const [isSelectedStatus, setIsSelectedStatus] = useState('All Statuses');
   const [isChecked, setIsChecked] = useState(false);
 
   // props for filter section
-  const propsChild = {
+  const propsState = {
     dataToFilter,
     setDataToFilter,
     dataIsFiltred,
@@ -30,16 +30,11 @@ function App() {
 
 
 
-
-
-
-
-
   return (
     <div className="App">
       <Header />
-      <FilterSection {...propsChild} />
-      <ResultsSection />
+      <FilterSection {...propsState} />
+      <ResultsSection data={dataIsFiltred} isChecked={isChecked} />
       <Footer />
     </div>
   );

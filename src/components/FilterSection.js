@@ -1,6 +1,7 @@
+import React from 'react';
 import Button from './Button';
 
-// data for selection status form
+// data for status selection
 const status = [
     {
         status: "All Statuses"
@@ -34,8 +35,17 @@ const FilterSection = ({ dataToFilter, setDataToFilter, dataIsFiltred, setDataIs
     // to filter data
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const filteredData = data.filter(dev => dev.devName === isSelectedDev)
-        // console.log(filteredData)
+        // to find index of selected Dev
+        const devIndex = dataToFilter.findIndex((dev) => dev.devName === isSelectedDev)
+        if (isSelectedStatus === "All Statuses") {
+            const filtredDataProject = dataToFilter[devIndex].projectList
+            setDataIsFiltred(filtredDataProject)
+            console.log(filtredDataProject)
+        } else {
+            const filtredDataProject = dataToFilter[devIndex].projectList.find((status) => status.status == isSelectedStatus)
+            setDataIsFiltred(filtredDataProject)
+            console.log(filtredDataProject)
+        }
     }
 
     // to reset all filters

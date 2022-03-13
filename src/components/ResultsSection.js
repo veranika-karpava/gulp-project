@@ -3,11 +3,12 @@ import ProjectInfo from './ProjectInfo';
 import EfficiencyInfo from './EfficiencyInfo';
 import TaskInfo from './TaskInfo';
 
-const ResultsSection = () => {
+const ResultsSection = ({ data, isChecked }) => {
+    console.log(data)
     return (
         <section className='results'>
-            <ProjectInfo />
-            {/* <EfficiencyInfo /> */}
+            <ProjectInfo data={data} />
+            <EfficiencyInfo isChecked={isChecked} />
             <TaskInfo />
         </section>
     );
