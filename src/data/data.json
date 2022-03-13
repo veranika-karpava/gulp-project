@@ -34,14 +34,14 @@
                 "estSum": "15236.48",
                 "totalEfficChanges": "0",
                 "totalEfficOriginHour": "2345.04",
-                "totalEfficOrigin%": "100",
+                "totalEfficOrigin": "100",
                 "totalEfficAverHour": "2345.04",
-                "totalEfficAver%": "100",
+                "totalEfficAver": "100",
                 "curEfficChanges": "0",
                 "curEfficOriginHour": "507.26",
-                "curEfficOrigin%": "100",
+                "curEfficOrigin": "100",
                 "curEfficAverHour": "507.26",
-                "curEfficAver%": "100"
+                "curEfficAver": "100"
             },
             {
                 "status": "Completed",

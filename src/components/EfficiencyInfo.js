@@ -1,56 +1,95 @@
 import React from 'react';
 
-const EfficiencyInfo = () => {
+const EfficiencyInfo = ({ data, isChecked }) => {
+    console.log(isChecked)
+
+    const totalDataEst = [{ title: "Changes", data: '', percent: '', curData: '', curPercent: '' },
+    { title: "Origin", data: data.totalEfficOriginHour, percent: data.totalEfficOrigin, curData: data.curEfficOriginHour, curPercent: data.curEfficOrigin },
+    { title: "Average", data: data.totalEfficAverHour, percent: data.totalEfficAver, curData: data.curEfficAverHour, curPercent: data.curEfficAver }]
+
+    const renderTotalTableData = () => {
+        return totalDataEst.map((item, i) => {
+            const { title, data, percent } = item
+            return (
+                <tr key={i} className='results__row-total-effic'>
+                    <th className='results__heading-row-effic'>{title}</th>
+                    {!data ?
+                        (title == "Changes" ?
+                            <>
+                                <td className='results__data-row results__data-row-hours'></td>
+                                <td className='results__data-row results__data-row-percent'></td>
+                            </>
+                            :
+                            <>
+                                <td className='results__data-row results__data-row-hours'> - h</td>
+                                <td className='results__data-row results__data-row-percent'> - %</td>
+                            </>
+                        )
+                        :
+                        <>
+                            <td className='results__data-row results__data-row-hours'>{data}h</td>
+                            <td className='results__data-row results__data-row-percent'>{percent}%</td>
+                        </>
+                    }
+                </tr>
+            )
+        })
+    }
+
+    const renderCurrentTableData = () => {
+        return totalDataEst.map((item, i) => {
+            const { title, data, curData, curPercent } = item
+            return (
+                <tr key={i} className='results__row-current-effic'>
+                    <th className='results__heading-row-effic'>{title}</th>
+                    {!data ?
+                        (title == "Changes" ?
+                            <>
+                                <td className='results__data-row results__data-row-hours'></td>
+                                <td className='results__data-row results__data-row-percent'></td>
+                            </>
+                            :
+                            <>
+                                <td className='results__data-row results__data-row-hours'> - h</td>
+                                <td className='results__data-row results__data-row-percent'> - %</td>
+                            </>
+                        )
+                        :
+                        <>
+                            <td className='results__data-row results__data-row-hours'>{curData}h</td>
+                            <td className='results__data-row results__data-row-percent'>{curPercent}%</td>
+                        </>
+                    }
+                </tr>
+            )
+        })
+    }
+
+
     return (
-        <article className='efficiency'>
-            <h1 className='efficiency__heading'>Efficiency</h1>
-            <div className='efficiency__container-info'>
-                <div className='efficiency__total'>
-                    <h2 className='efficiency__subheading'>Total Efficiency</h2>
-                    <table className='efficiency__table-efficiency'>
-                        <tbody>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Changes</th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Origin </th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Average</th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <>
+            {!isChecked ? < article className='results__none-display'></article> : <article className='results__efficiency'>
+                <h1 className='results__heading'>Efficiency</h1>
+                <div className='results__container-efficiency'>
+                    <div className='results__total'>
+                        <h2 className='results__subheading'>Total Efficiency</h2>
+                        <table className='results__table-efficiency'>
+                            <tbody className='results__body-efficiency'>
+                                {renderTotalTableData()}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className='results__current'>
+                        <h2 className='results__subheading'>Efficiency by Current Month</h2>
+                        <table className='results__table-efficiency'>
+                            <tbody className='results__body-efficiency'>
+                                {renderCurrentTableData()}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div className='efficiency__current'>
-                    <h2 className='efficiency__subheading'>Efficiency by Current Month</h2>
-                    <table className='efficiency__table-efficiency'>
-                        <tbody>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Changes</th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Origin</th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                            <tr className='efficiency__row'>
-                                <th className='efficiency__heading-table'>Average</th>
-                                <td className='efficiency__hours'>Smth</td>
-                                <td className='efficiency__percentage'>Smth</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </article>
+            </article>}
+        </>
     );
 };
 

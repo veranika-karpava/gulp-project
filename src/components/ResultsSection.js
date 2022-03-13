@@ -8,7 +8,7 @@ const ResultsSection = ({ data, isChecked }) => {
     return (
         <section className='results'>
             <ProjectInfo data={data} />
-            <EfficiencyInfo isChecked={isChecked} />
+            <EfficiencyInfo isChecked={isChecked} data={data} />
             <TaskInfo />
         </section>
     );

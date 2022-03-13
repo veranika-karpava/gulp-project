@@ -1,7 +1,9 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.efficiency{
+
+.results{
+    &__efficiency{
         width: 92%;
         margin: 1.5625rem 3.75rem 2.5rem 3.75rem;
         background-color: $bg-color-article;
@@ -19,18 +21,18 @@
             background: linear-gradient(350.45deg, #BFBAFA 15.3%, #624BFF 87.74%, #8F7FFF 87.74%, #7F76F7 87.74%);
             border-radius: 7px 0px 0px 7px;
             box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
-        }
+        }}
 
     &__heading{
         @include font-stack-heading;
-        text-align: center;
+        // text-align: center;
         margin-bottom: 1.5rem;
     }
 
-    &__container-info {
+    &__container-efficiency{
+        direction: ltr;
         width: 100%;
         @include flex(space-between, center, row, nowrap);
-        direction: ltr;
     }
 
     &__total,
@@ -45,10 +47,15 @@
 
     &__table-efficiency{
         width: 100%;
+    }
+
+    &__body-efficiency{
+        width: 100%;
         @include flex(space-between, flex-start, column, nowrap);
     }
 
-    &__row{
+    &__row-total-effic,
+    &__row-current-effic{
         padding: .5rem 0rem;
         width: 100%;
         border-bottom: 1px solid $color-border;
@@ -58,24 +65,24 @@
     }
     }
 
-    &__heading-table{
+    &__heading-row-effic{
         width: 33.33%;
         @include font-stack-subheadin-project-time;
         padding: 0;
         text-align: left;
     }
 
-    &__hours,
-    &__percentage{
+    &__data-row
+    {
         padding: 0;
         width: 33.33%;
     }
 
-    &__hours{
+    &__data-row-hours{
         text-align: center;
     }
 
-    &__percentage{
+    &__data-row-percent{
         text-align: right;
     }
 
