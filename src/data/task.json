@@ -1,0 +1,634 @@
+[
+    {
+        "devName": "Jenny Wilson",
+        "projectList": [
+            {
+                "projectName": "Science & Information Platform",
+                "status": "Non Completed",
+                "taskList": [
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Two levels of the menu mockup",
+                        "developer": [
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "1567.60",
+                        "myTimeSpentByPeriod": "15.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Edit pictures",
+                        "developer": [
+                            "Dianne Russel",
+                            "Adam Gordon",
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "678.20",
+                        "myTimeSpentByPeriod": "67.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Subdomain home pages mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "756.70",
+                        "myTimeSpentByPeriod": "75.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Courtney Henry, Augusta Walter"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock"
+                        ],
+                        "workType": [
+                            "Programming Meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Markup, Graphic Design"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "",
+                        "myTimeSpentByPeriod": "",
+                        "efficiency": ""
+                    },
+                    {
+                        "taskName": "Sum",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "2078",
+                        "myTimeSpentByPeriod": "1090",
+                        "efficiency": "100%"
+                    }
+                ]
+            },
+            {
+                "projectName": "Video Platform",
+                "status": "Completed",
+                "taskList": [
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Two levels of the menu mockup",
+                        "developer": [
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "1567.60",
+                        "myTimeSpentByPeriod": "15.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Edit pictures",
+                        "developer": [
+                            "Dianne Russel",
+                            "Adam Gordon",
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "678.20",
+                        "myTimeSpentByPeriod": "67.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Subdomain home pages mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "756.70",
+                        "myTimeSpentByPeriod": "75.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Courtney Henry, Augusta Walter"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "",
+                        "myTimeSpentByPeriod": "",
+                        "efficiency": ""
+                    },
+                    {
+                        "taskName": "Sum",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "2078",
+                        "myTimeSpentByPeriod": "1090",
+                        "efficiency": "100%"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "devName": "Jane Cooper",
+        "projectList": [
+            {
+                "projectName": "Something else",
+                "status": "Non Completed",
+                "taskList": [
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Two levels of the menu mockup",
+                        "developer": [
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "1567.60",
+                        "myTimeSpentByPeriod": "15.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Edit pictures",
+                        "developer": [
+                            "Dianne Russel",
+                            "Adam Gordon",
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "678.20",
+                        "myTimeSpentByPeriod": "67.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Subdomain home pages mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "756.70",
+                        "myTimeSpentByPeriod": "75.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Courtney Henry, Augusta Walter"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock"
+                        ],
+                        "workType": [
+                            "Programming Meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Markup, Graphic Design"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "",
+                        "myTimeSpentByPeriod": "",
+                        "efficiency": ""
+                    },
+                    {
+                        "taskName": "Sum",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "2078",
+                        "myTimeSpentByPeriod": "1090",
+                        "efficiency": "100%"
+                    }
+                ]
+            },
+            {
+                "projectName": "Video Platform",
+                "status": "Completed",
+                "taskList": [
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Two levels of the menu mockup",
+                        "developer": [
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "1567.60",
+                        "myTimeSpentByPeriod": "15.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Edit pictures",
+                        "developer": [
+                            "Dianne Russel",
+                            "Adam Gordon",
+                            "Robert Fox"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "678.20",
+                        "myTimeSpentByPeriod": "67.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Subdomain home pages mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "756.70",
+                        "myTimeSpentByPeriod": "75.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "Search page mockup",
+                        "developer": [
+                            "Courtney Henry",
+                            "Kent Peacock",
+                            "Nick Johnson",
+                            "Ralph Edward",
+                            "Kate Middleton",
+                            "Dianne Russel"
+                        ],
+                        "workType": [
+                            "Programming Meetings",
+                            "Stand up meetings"
+                        ],
+                        "status": "Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "232.17",
+                        "myTimeSpentByPeriod": "23.00",
+                        "efficiency": "100%"
+                    },
+                    {
+                        "taskName": "Landing page mockup",
+                        "developer": [
+                            "Courtney Henry, Augusta Walter"
+                        ],
+                        "workType": [
+                            "Graphic Design"
+                        ],
+                        "status": "Non Completed",
+                        "estimation": "0.0",
+                        "totalTimeSpentByAll": "345.60",
+                        "myTimeSpentByPeriod": "45.00",
+                        "efficiency": "-"
+                    },
+                    {
+                        "taskName": "",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "",
+                        "myTimeSpentByPeriod": "",
+                        "efficiency": ""
+                    },
+                    {
+                        "taskName": "Sum",
+                        "developer": [],
+                        "workType": [],
+                        "status": "",
+                        "estimation": "",
+                        "totalTimeSpentByAll": "2060",
+                        "myTimeSpentByPeriod": "1080",
+                        "efficiency": "100%"
+                    }
+                ]
+            }
+        ]
+    }
+]

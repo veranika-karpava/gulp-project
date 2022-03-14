@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Header />
       <FilterSection {...propsState} />
-      <ResultsSection data={dataIsFiltred} isChecked={isChecked} />
+      <ResultsSection data={dataIsFiltred} isChecked={isChecked} isSelectedDev={isSelectedDev} isSelectedStatus={isSelectedStatus} />
       <Footer />
     </div>
   );

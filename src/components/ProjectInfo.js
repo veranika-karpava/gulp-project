@@ -3,6 +3,7 @@ import { dollar } from '../assets/icons/dollar-sign.png';
 
 const ProjectInfo = ({ data }) => {
 
+
     const totalDataTime = [{ title: "Changes", data: data.totalChanges, add: false },
     { title: "Origin", data: data.totalOrigin, add: false },
     { title: "Programming", data: data.totalProgramming, add: true },
@@ -54,7 +55,7 @@ const ProjectInfo = ({ data }) => {
         return estimationsDataTime.map((item, i) => {
             const { title, data } = item
             return (
-                <tr key={i} className='results__row'>
+                <tr key={i} className='results__row results__estimations'>
                     <th className='results__heading-row'>{title}</th>
                     {!data ? <td className='results__data-row'> - h</td> : <td className='results__data-row'>{data}h</td>}
                 </tr>

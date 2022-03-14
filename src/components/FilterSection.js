@@ -40,11 +40,9 @@ const FilterSection = ({ dataToFilter, setDataToFilter, dataIsFiltred, setDataIs
         if (isSelectedStatus === "All Statuses") {
             const filtredDataProject = dataToFilter[devIndex].projectList
             setDataIsFiltred(filtredDataProject)
-            console.log(filtredDataProject)
         } else {
             const filtredDataProject = dataToFilter[devIndex].projectList.find((status) => status.status == isSelectedStatus)
             setDataIsFiltred(filtredDataProject)
-            console.log(filtredDataProject)
         }
     }
 

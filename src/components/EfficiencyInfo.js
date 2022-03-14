@@ -1,7 +1,6 @@
 import React from 'react';
 
 const EfficiencyInfo = ({ data, isChecked }) => {
-    console.log(isChecked)
 
     const totalDataEst = [{ title: "Changes", data: '', percent: '', curData: '', curPercent: '' },
     { title: "Origin", data: data.totalEfficOriginHour, percent: data.totalEfficOrigin, curData: data.curEfficOriginHour, curPercent: data.curEfficOrigin },

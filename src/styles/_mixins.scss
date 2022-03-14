@@ -47,6 +47,11 @@
     @include font-stack (0.75rem, 400, 1.125rem, $bg-color-button);
 }
 
+//sum
+@mixin font-stack-sum-task{
+    @include font-stack (0.75rem, 400, 1.125rem, $text-color-heading);
+}
+
 // body text
 @mixin font-stack-body-task{
     @include font-stack (0.75rem, 400, 1.125rem, $text-color-primary);
