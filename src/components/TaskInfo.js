@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import taskData from '../data/task.json';
+import defaultKey from '../data/defaultData.json'
 import sort from '../assets/icons/sort.svg';
 import RowsCount from './RowsCount';
 
 const TaskInfo = ({ data, isSelectedDev }) => {
-    const [isShowed, setIsShowed] = useState(false)
+    const [isShowed, setIsShowed] = useState(false);
+    const [taskListData, setTaskListData] = useState([]);
+    const [isSorted, setIsSorted] = useState([])
 
     const defaultData =
         [
@@ -20,12 +23,18 @@ const TaskInfo = ({ data, isSelectedDev }) => {
 
     //for rendering heading of table
     const renderTableHeader = () => {
+        // get key for sorting
+        const getKey = (val) => {
+            const newKeyForSort = Object.keys(defaultKey).find(key => defaultKey[key] === val)
+            return newKeyForSort;
+        }
 
         const tableHeading = defaultData;
         return tableHeading.map((key, index) => {
             return <th className='results__heading-container-table-task' key={index}>
                 <h2 className='results__heading-text'>{key}</h2>
-                <img src={sort} alt='Sort icon' className='results__sort-icon' onClick={() => handleSorting('status')} />
+                <img src={sort} alt='Sort icon' className='results__sort-icon'
+                    onClick={() => handleSortingNumber(getKey(key))} />
             </th>
         })
     }
@@ -40,12 +49,29 @@ const TaskInfo = ({ data, isSelectedDev }) => {
         return taskListData;
     }
 
-    const taskListData = filterDataTask();
+    // filtered data
+    useEffect(() => {
+        setTaskListData(filterDataTask())
+    }, [data, isSorted])
 
+    // number of rows  for countRows component
     const totalRows = taskListData.length;
 
 
-    console.log(totalRows)
+    // sort data from table
+    const handleSortingNumber = (sortKey) => {
+        let tempTaskList = [...taskListData];
+        let removedTaskList = tempTaskList.splice(-2);
+        tempTaskList.sort((a, b) => {
+            return a[sortKey] > b[sortKey]
+                ? 1
+                : a[sortKey] < b[sortKey]
+                    ? -1
+                    : 0;
+        });
+        tempTaskList = [...tempTaskList, ...removedTaskList];
+        setTaskListData(tempTaskList);
+    }
 
     // show more option in table 
     const showToggle = (e) => {
@@ -57,14 +83,14 @@ const TaskInfo = ({ data, isSelectedDev }) => {
         let showMoreArray = [];
         if (!isShowed) {
             showArray = [...array.splice(0, 2)]
-            console.log(isShowed)
-            console.log(showArray)
+            // console.log(isShowed)
+            // console.log(showArray)
             return showArray;
         }
         showMoreArray = [...array]
-        console.log(isShowed)
+        // console.log(isShowed)
 
-        console.log(showMoreArray)
+        // console.log(showMoreArray)
         return showMoreArray;
     }
 
@@ -73,9 +99,9 @@ const TaskInfo = ({ data, isSelectedDev }) => {
 
     // for rendering data from taskListData
     const renderTableData = () => {
+        console.log(taskListData)
         return taskListData.map((item, index) => {
             const { taskName, developer, workType, status, estimation, totalTimeSpentByAll, myTimeSpentByPeriod, efficiency } = item
-            // console.log(developer)
 
             return (
                 <tr className='results__row-table-task' key={index}>
@@ -96,27 +122,6 @@ const TaskInfo = ({ data, isSelectedDev }) => {
                         <td className='results__data results__developer'><p className='results__content-developer'>{`${developer}`}</p></td>
                     }
 
-
-                    {/* <td className='results__data results__developer'>
-                        {getRenderedItems(developer).map((name, i) => {
-                            <>
-                                <p className='results__content-developer' key={i}>{`${name}, `}</p>
-                                <button className='results__button-show-more' onClick={showToggle}>{isShowed ? 'Show less' : `Show more(${developer.length})`}</button>
-                            </>
-                        })}
-                    </td> */}
-
-                    {/* {developer.length > 2 ?
-                        <td className='results__data results__developer'>
-                            {getRenderedItems(developer).map((name, i) => {
-                                console.log(name)
-                                return <p className='results__content-developer' key={i}>{`${name}, `}</p>
-                            })}
-                            {!isShowed ? <button className='results__button-show-more' onClick={showToggle}>{`Show more(${developer.length})`}</button> : <button className='results__button-show-more' onClick={showToggle}>{`Show less(${developer.length})`}</button>}
-                        </td>
-                        : <td className='results__data results__developer'>
-                            {developer}</td>} */}
-
                     <td className='results__data results__work'>{workType}</td>
 
                     {status === "Completed" ? <td className='results__data results__status-completed'>{status}</td> : <td className='results__data results__status-non'>{status}</td>}
@@ -131,16 +136,6 @@ const TaskInfo = ({ data, isSelectedDev }) => {
                 </tr >
             )
         })
-    }
-
-
-
-    const handleSorting = (e, key) => {
-
-        const taskSortedListData = taskListData.sort((a, b) => (a.key < b.key ? -1 : 1));
-
-        console.log(taskSortedListData)
-        console.log("it works")
     }
 
     return (

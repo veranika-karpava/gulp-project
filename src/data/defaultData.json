@@ -1,0 +1,10 @@
+{
+    "taskName": "Task name",
+    "developer": "Developer",
+    "workType": "Work Type",
+    "status": "Status",
+    "estimation": "Estimation (h)",
+    "totalTimeSpentByAll": "Total time spent by All",
+    "myTimeSpentByPeriod": "My Time spent by Period(h)",
+    "efficiency": "Efficiency"
+}
