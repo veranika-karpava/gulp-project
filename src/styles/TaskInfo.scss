@@ -13,7 +13,7 @@
         @include flex(space-between, center, column, nowrap);
     }
 
-    &__heading-container{
+    &__heading-table-task{
         @include flex(space-between, center, row, nowrap);
         padding: 1.3125rem 1.375rem 1.25rem 2rem; 
         width: 100%;
@@ -23,7 +23,12 @@
         margin-bottom: 0.5rem;
     }
 
-    &__body{
+    &__heading-row-table-task{
+        width: 100%;
+        @include flex(space-between, center, row, nowrap);
+    }
+
+    &__content-table-task{
         width: 100%;
         @include flex(space-between, center, column, nowrap);
     }
@@ -58,7 +63,7 @@
         }
     }
 
-    &__heading-task{
+    &__heading-container-table-task{
         @include flex(flex-start, center, row, nowrap);
         &:nth-of-type(1){
             width: 10rem;
@@ -87,7 +92,6 @@
             width: 4.6875rem;
             text-align: right;
         }
-
     }
 
     &__data{

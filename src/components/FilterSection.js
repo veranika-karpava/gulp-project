@@ -48,10 +48,11 @@ const FilterSection = ({ dataToFilter, setDataToFilter, dataIsFiltred, setDataIs
 
     // to reset all filters
     const handleReset = (e) => {
-        e.preventDefault();
-        setIsSelectedDev('');
-        setIsSelectedStatus('All status');
+        setDataToFilter(dataToFilter);
+        setIsSelectedDev(dataToFilter[0].devName);
+        setIsSelectedStatus('All Statuses');
         setIsChecked(false);
+        e.preventDefault();
     }
 
     return (

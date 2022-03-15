@@ -79,7 +79,7 @@ const EfficiencyInfo = ({ data, isChecked }) => {
                         </table>
                     </div>
                     <div className='results__current'>
-                        <h2 className='results__subheading'>Efficiency by Current Month</h2>
+                        <h2 className='results__subheading'>Efficiency by Current Month({data.curMonth})</h2>
                         <table className='results__table-efficiency'>
                             <tbody className='results__body-efficiency'>
                                 {renderCurrentTableData()}
