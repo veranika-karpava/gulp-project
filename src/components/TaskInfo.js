@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import taskData from '../data/task.json';
 import sort from '../assets/icons/sort.svg';
+import RowsCount from './RowsCount';
 
 const TaskInfo = ({ data, isSelectedDev }) => {
     const [isShowed, setIsShowed] = useState(false)
@@ -40,6 +41,11 @@ const TaskInfo = ({ data, isSelectedDev }) => {
     }
 
     const taskListData = filterDataTask();
+
+    const totalRows = taskListData.length;
+
+
+    console.log(totalRows)
 
     // show more option in table 
     const showToggle = (e) => {
@@ -148,6 +154,7 @@ const TaskInfo = ({ data, isSelectedDev }) => {
                             </tr>
                         </thead>
                     </table>
+                    <RowsCount totalRows={totalRows} />
                 </article>
                 :
                 <article className='results__task-info'>
@@ -161,6 +168,7 @@ const TaskInfo = ({ data, isSelectedDev }) => {
                             {renderTableData()}
                         </tbody>
                     </table>
+                    <RowsCount totalRows={totalRows} />
                 </article>
             }
         </>

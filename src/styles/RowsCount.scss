@@ -1,0 +1,39 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.results {
+    &__rows-count-container{
+        width: 50%;
+        padding: 0.75rem 0 2.5rem 5.75rem;
+        @include flex(flex-start, center, row, nowrap);
+        @include font-stack-body;
+       
+    }
+
+    &__rows-count-form{
+        width: 48%;
+        margin-right: 0.75rem;
+        @include flex(space-between, center, row, nowrap);
+    }
+
+    &__page-counter{
+        @include flex(space-between, center, row, nowrap);
+        @include form-style;
+         width: 122px;
+    }
+
+    &__selection-form{
+        @include form-style;
+        width: 70px;
+    }
+
+    &__page-active{
+        width: 24px;
+        background-color: $bg-color-button;
+        border-radius: 4px;
+        text-align: center;
+        color: $text-color-heading;
+    }
+
+    
+}
