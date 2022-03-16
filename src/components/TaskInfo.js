@@ -7,7 +7,7 @@ import RowsCount from './RowsCount';
 const TaskInfo = ({ data, isSelectedDev }) => {
     const [isShowed, setIsShowed] = useState(false);
     const [taskListData, setTaskListData] = useState([]);
-    const [isSorted, setIsSorted] = useState([])
+    const [isButtonId, setIsButtonId] = useState('');
 
     const defaultData =
         [
@@ -52,7 +52,7 @@ const TaskInfo = ({ data, isSelectedDev }) => {
     // filtered data
     useEffect(() => {
         setTaskListData(filterDataTask())
-    }, [data, isSorted])
+    }, [data])
 
     // number of rows  for countRows component
     const totalRows = taskListData.length;
@@ -75,33 +75,31 @@ const TaskInfo = ({ data, isSelectedDev }) => {
 
     // show more option in table 
     const showToggle = (e) => {
-        setIsShowed(!isShowed)
+        e.preventDefault();
+        setIsShowed(!isShowed);
+        console.log(e.target.id)
+        setIsButtonId(Number(e.target.id))
     }
 
     const getRenderedItems = (array) => {
-        let showArray = [];
-        let showMoreArray = [];
+        let baseArray = [...array];
+        let showMoreArray = [...array]
+        let showArray = baseArray.splice(0, 2);
+
         if (!isShowed) {
-            showArray = [...array.splice(0, 2)]
-            // console.log(isShowed)
-            // console.log(showArray)
             return showArray;
+        } else {
+            return showMoreArray;
         }
-        showMoreArray = [...array]
-        // console.log(isShowed)
-
-        // console.log(showMoreArray)
-        return showMoreArray;
     }
-
-
-
 
     // for rendering data from taskListData
     const renderTableData = () => {
         console.log(taskListData)
         return taskListData.map((item, index) => {
             const { taskName, developer, workType, status, estimation, totalTimeSpentByAll, myTimeSpentByPeriod, efficiency } = item
+
+            console.log(developer)
 
             return (
                 <tr className='results__row-table-task' key={index}>
@@ -111,15 +109,16 @@ const TaskInfo = ({ data, isSelectedDev }) => {
                     {developer.length > 2 ?
                         <td className='results__data results__developer'>
                             <p className='results__content-developer'>
-                                {getRenderedItems(developer).map((name, i) => {
-                                    console.log(name)
-                                    return <span key={i}>{`${name}, `}</span>
-                                })}
+                                {getRenderedItems(developer).map((name, i) => <span key={i}>{name},</span>)}
                             </p>
-                            {/* <button className='results__button-show-more' onClick={showToggle}>{isShowed ? 'Show less' : `Show more(${developer.length})`}</button> */}
+                            <button id={index} className='results__button-show-more' onClick={(e) => { showToggle(e) }}>{isShowed && isButtonId === index ? 'Show less' : `Show more(${developer.length})`}</button>
                         </td>
                         :
-                        <td className='results__data results__developer'><p className='results__content-developer'>{`${developer}`}</p></td>
+                        <td className='results__data results__developer'>
+                            <p className='results__content-developer'>
+                                {developer.map((name, i) => <span key={i}>{name},</span>)}
+                            </p>
+                        </td>
                     }
 
                     <td className='results__data results__work'>{workType}</td>

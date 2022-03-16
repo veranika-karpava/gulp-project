@@ -130,4 +130,12 @@
         @include font-stack-sum-task;
     }
 
+    &__button-show-more{
+        border: none;
+        cursor: pointer;
+        @include font-stack-name-task;
+        background-color:transparent;
+        padding: 0.3rem 0;
+    }
+
 }
